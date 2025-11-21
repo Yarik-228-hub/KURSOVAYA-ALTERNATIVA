@@ -1,0 +1,150 @@
+.stats-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 99.5vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 4px #0000008c;
+  background: linear-gradient(225deg, $gradient-start 0%, $gradient-middle 50%, $gradient-end 100%);
+  padding: 64px 16px;
+
+  @include respond(md) { padding: 96px 56px; }
+  @include respond(lg) { padding: 124px 56px; }
+}
+
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  max-width: 1114px;
+  margin: 0 auto;
+}
+ 
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+
+  @include respond(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+  @include respond(md) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 64px;
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 32px;
+  font-family: $font-secondary;
+  font-weight: 700;
+  line-height: 38px;
+  color: $text-primary;
+
+  @include respond(sm) {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @include respond(md) {
+    font-size: 44px;
+    line-height: 52px;
+  }
+  @include respond(lg) {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+
+.stat-label {
+  font-size: 18px;
+  font-family: $font-primary;
+  font-weight: 500;
+  line-height: 24px;
+  color: $text-primary;
+
+  @include respond(sm) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  @include respond(md) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @include respond(lg) {
+    font-size: 28px;
+    line-height: 37px;
+  }
+}
+
+.cta-button {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-family: $font-secondary;
+  font-weight: 600;
+  line-height: 28px;
+  color: $text-primary;
+  background-color: $accent;
+  border: none;
+  border-radius: 30px;
+  padding: 24px 48px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  @include respond(sm) {
+    font-size: 28px;
+    line-height: 34px;
+    padding: 28px 56px;
+  }
+  @include respond(md) {
+    font-size: 32px;
+    line-height: 38px;
+    padding: 32px 64px;
+  }
+  @include respond(lg) {
+    font-size: 36px;
+    line-height: 43px;
+    padding: 34px 108px;
+  }
+
+  &:hover {
+    background-color: $accent-hover;
+    transform: translateY(-2px);
+  }
+
+  &::before {
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-image: url('../assets/images/seach.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,64 @@
+<section class="services-section">
+  <div class="services-stack">
+    <div class="services-header">
+      <h2 class="services-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
+    </div>
+    
+    <div class="swiper services-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide services-slide">
+          <div class="services-image-container">
+            <div class="services-text">Помощь в приобретении любого вида имущества</div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide services-slide">
+          <div class="services-image-container">
+            <div class="services-text">Лучшие условия аренды жилья</div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide services-slide">
+          <div class="services-image-container">
+            <div class="services-text">Юридическая помощь от профессионалов</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Подключение Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.services-slider', {
+    slidesPerView: 'auto', 
+    spaceBetween: 24, 
+    loop: true, 
+    centeredSlides: false, 
+    
+    breakpoints: {
+      640: { spaceBetween: 30 },
+      1024: { spaceBetween: 40 }
+    },
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    speed: 600,
+  });
+</script>

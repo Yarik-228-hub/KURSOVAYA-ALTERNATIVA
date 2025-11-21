@@ -1,0 +1,70 @@
+.contact-hero-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 70px;
+  background-image: url('../assets/images/image 3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 32px 16px;
+
+  @include respond(md) {
+    padding: 32px 64px;
+  }
+}
+
+.contact-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1114px;
+  margin: 52px auto;
+}
+
+.contact-hero-title {
+  font-size: 32px;
+  font-family: $font-secondary;
+  font-weight: $font-weight-black;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: $text-primary;
+
+  @include respond(sm) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include respond(md) {
+    font-size: 52px;
+    line-height: 62px;
+  }
+
+  @include respond(lg) {
+    font-size: 64px;
+    line-height: 77px;
+  }
+}
+
+.contact-hero-subtitle {
+  font-size: 18px;
+  font-family: $font-primary;
+  font-weight: $font-weight-regular;
+  line-height: 24px;
+  color: $text-primary;
+
+  @include respond(sm) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @include respond(lg) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}

@@ -1,0 +1,190 @@
+.about-team-section {
+  margin-top: 72px;
+  width: 100%;
+}
+
+.about-team-section__container {
+  background: linear-gradient(225deg, #1d1031 0%, #0f0c20 50%, #0e1b29 100%);
+  padding: 52px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-team-section__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.about-team-section__title {
+  font-size: 32px;
+  font-family: 'Georama', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about-team-section__subtitle {
+  font-size: 20px;
+  font-family: 'Exo', sans-serif;
+  text-align: center;
+}
+
+.about-team-section__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center; /* Центрирование карточек в колонке */
+}
+
+.about-team-member {
+  background-color: #0a0f1c;
+  border-radius: 34px;
+  padding: 24px 16px; /* Увеличил padding для лучшего визуала */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 280px; /* Ограничение ширины для центрирования */
+  height: fit-content;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &__photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    flex-shrink: 0; /* Запрещаем сжатие фото */
+  }
+
+  &__name {
+    font-size: 16px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    flex-shrink: 0; /* Запрещаем сжатие имени */
+  }
+
+  &__position {
+    font-size: 13px;
+    font-family: 'Exo', sans-serif;
+    color: #0f3fad;
+    text-align: center;
+    flex-shrink: 0; /* Запрещаем сжатие должности */
+  }
+
+  &__desc {
+    font-size: 11px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px;
+    flex-grow: 1; /* Разрешаем растягивание описания */
+    display: flex;
+    align-items: center; /* Центрируем текст по вертикали */
+  }
+
+  @media (min-width: 640px) {
+    width: calc(50% - 12px);
+    max-width: none;
+    height: 100%; /* Растягиваем на всю высоту */
+    &__photo { width: 90px; height: 90px; }
+    &__name { font-size: 18px; }
+    &__position { font-size: 14px; }
+    &__desc { font-size: 12px; }
+  }
+
+  @media (min-width: 768px) {
+    width: calc(25% - 35px);
+    height: 100%; /* Растягиваем на всю высоту */
+    &__photo { width: 100px; height: 100px; }
+    &__name { font-size: 20px; }
+    &__position { font-size: 15px; }
+    &__desc { font-size: 12px; }
+  }
+
+  @media (min-width: 1024px) {
+    width: 252px;
+    height: 380px; /* Фиксированная высота для выравнивания */
+    
+    &__desc {
+      justify-content: center; /* Центрируем текст по вертикали и горизонтали */
+      padding: 12px;
+    }
+  }
+}
+
+/* Дополнительные медиа-запросы для центрирования и выравнивания */
+@media (min-width: 640px) {
+  .about-team-section {
+    &__grid {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; /* Центрирование карточек в строке */
+      gap: 24px;
+      align-items: stretch; /* Растягиваем карточки по высоте */
+    }
+  }
+  
+  .about-team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Выравнивание содержимого по верху */
+  }
+}
+
+@media (min-width: 768px) {
+  .about-team-section {
+    &__grid {
+      justify-content: center;
+      gap: 30px;
+      align-items: stretch; /* Растягиваем карточки по высоте */
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-team-section {
+    &__grid {
+      justify-content: center;
+      gap: 32px;
+      align-items: stretch; /* Растягиваем карточки по высоте */
+    }
+  }
+  
+  .about-team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Равномерное распределение контента */
+    
+    &__photo {
+      margin-bottom: 20px;
+    }
+    
+    &__name {
+      margin-bottom: 8px;
+    }
+    
+    &__position {
+      margin-bottom: 16px;
+    }
+    
+    &__desc {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

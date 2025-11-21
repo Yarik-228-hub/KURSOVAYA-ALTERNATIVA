@@ -1,0 +1,78 @@
+.final-cta-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 99.5vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 72px;
+}
+
+.final-cta-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 4px 4px #0000008c;
+  background: linear-gradient(225deg, $gradient-start 0%, $gradient-middle 50%, $gradient-end 100%);
+  padding: 64px 16px;
+
+  @include respond(md) { padding: 96px 56px; }
+}
+ 
+.final-cta-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 1114px;
+  margin: 0 auto;
+}
+
+.final-cta-title {
+  font-size: 32px;
+  font-family: $font-secondary;
+  font-weight: 900;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: $text-primary;
+
+  @include respond(sm) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  @include respond(md) {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  @include respond(lg) {
+    font-size: 64px;
+    line-height: 77px;
+  }
+}
+
+.final-cta-subtitle {
+  font-size: 24px;
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 32px;
+  color: $text-primary;
+
+  @include respond(sm) {
+    font-size: 28px;
+    line-height: 37px;
+  }
+  @include respond(md) {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  @include respond(lg) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}

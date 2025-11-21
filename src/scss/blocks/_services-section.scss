@@ -1,0 +1,295 @@
+// Модальные окна
+.modal-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    background: $secondary-bg;
+    border: 1px solid $text-primary;
+    border-radius: $border-radius-lg;
+    padding: 40px 24px;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    z-index: 1;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: $accent;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba($accent, 0.1);
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: $font-secondary;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    color: $text-primary;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-family: $font-primary;
+    line-height: 1.5;
+    color: $text-primary;
+    margin-bottom: 24px;
+  }
+
+  &__features,
+  &__steps,
+  &__banks {
+    h3 {
+      font-size: 18px;
+      font-family: $font-secondary;
+      font-weight: $font-weight-semibold;
+      color: $accent;
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      font-size: 14px;
+      font-family: $font-primary;
+      line-height: 1.4;
+      color: $text-primary;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__bank-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    span {
+      background: rgba($accent, 0.1);
+      padding: 6px 12px;
+      border-radius: $border-radius-sm;
+      font-size: 13px;
+      color: $text-primary;
+    }
+  }
+}
+
+.modal-toggle:checked + .store-service-card + .modal {
+  display: block;
+}
+
+// Существующие стили для карточек (ваш код)
+.store-services-section {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 64px 16px;
+  margin-top: 64px;
+
+  @media (min-width: $breakpoint-md) {
+    padding: 64px 56px;
+  }
+}
+
+.store-services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.store-services-title {
+  font-size: 32px;
+  font-family: $font-secondary;
+  font-weight: $font-weight-black;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-primary;
+  width: auto;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, $accent, transparent);
+    margin: 16px auto 0;
+    border-radius: 2px;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: 64px;
+    line-height: 77px;
+  }
+}
+
+.store-services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  margin-right: 12px;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    gap: 104px;
+  }
+}
+
+// Карточка теперь кликабельная (обернута в label)
+.store-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: $secondary-bg;
+  border-radius: $border-radius-lg;
+  padding: 28px 22px;
+  @include store-card-hover-effect;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  // Subtle gradient overlay on hover
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba($accent, 0.1));
+    opacity: 0;
+    transition: opacity $transition-speed $transition-timing;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    width: calc(50% - 24px);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 330px;
+  }
+}
+
+.store-service-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  z-index: 2;
+  transition: transform $transition-speed $transition-timing;
+
+  .store-service-card:hover & {
+    transform: scale(1.1);
+  }
+
+  @media (min-width: $breakpoint-md) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.store-service-title {
+  font-size: 16px;
+  font-family: $font-secondary;
+  font-weight: $font-weight-semibold;
+  line-height: 20px;
+  text-align: center;
+  color: $text-primary;
+  width: auto;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+
+.store-service-description {
+  font-size: 13px;
+  font-family: $font-primary;
+  font-weight: $font-weight-regular;
+  line-height: 16px;
+  text-align: center;
+  color: $text-primary;
+  width: 100%;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}

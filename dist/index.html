@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Альтернатива - Агентство Недвижимости | Найдем Ваш Идеальный Дом</title>
+  <meta name="description" content="Профессиональное агентство недвижимости Альтернатива. 12+ лет опыта, 24/7 сервис, 15,500+ положительных отзывов. Продажа и аренда недвижимости с гарантией лучшей цены." />
+  <meta name="keywords" content="недвижимость, агентство недвижимости, продажа квартир, аренда домов, Москва, Нижний Новгород, альтернатива" />
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Альтернатива - Агентство Недвижимости | Найдем Ваш Идеальный Дом">
+  <meta property="og:description" content="Профессиональное агентство недвижимости с 12+ летним опытом. Персональный сервис 24/7 и гарантия лучшей цены.">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="main-container">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+<header class="header">
+  <div class="header-wrapper">
+    <div class="logo-section">
+      <img src="../assets/images/АЛЬТЕРНАТИВА.svg" alt="Альтернатива логотип" class="logo-image">
+    </div>
+    
+    <nav class="nav-menu" role="navigation">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="real-estate.html" class="nav-link">Недвижимость</a>
+      <a href="contacts.html" class="nav-link">Контакты</a>
+      <a href="about.html" class="nav-link">О нас</a>
+    </nav>
+    
+    <div class="user-section">
+      <img src="../assets/images/user.svg" alt="Пользователь" class="user-avatar">
+      <button class="login-button">
+        <span class="login-text">Войти</span>
+      </button>
+    </div>
+    
+    <label for="menu-toggle" class="hamburger" aria-label="Открыть меню">☰</label>
+  </div>
+</header>
+
+<div class="mobile-menu">
+  <div class="mobile-menu__overlay"></div>
+  <div class="mobile-menu__content">
+    <label for="menu-toggle" class="mobile-menu__close">✕</label>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="real-estate.html">Недвижимость</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="about.html">О нас</a>
+    </nav>
+  </div>
+</div>
+    
+    <main class="content-wrapper">
+      <section class="hero-section" id="home">
+  <div class="hero-content">
+    <h1 class="hero-title">Найдем ваш идеальный дом</h1>
+    <p class="hero-subtitle">Профессиональный подбор недвижимости с гарантией лучшей цены и полным юридическим сопровождением</p>
+  </div>
+</section>
+      <section class="stats-section">
+  <div class="stats-container">
+    <div class="stats-content">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Лет на рынке</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Персональный сервис</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15,500+</div>
+          <div class="stat-label">Положительных отзывов</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Успешных сделок</div>
+        </div>
+      </div>
+      <a href="#properties" class="cta-button">НАЧАТЬ ПОИСК</a>
+    </div>
+  </div>
+</section>
+      <section class="services-section">
+  <div class="services-stack">
+    <div class="services-header">
+      <h2 class="services-title">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
+    </div>
+    
+    <div class="swiper services-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide services-slide">
+          <div class="services-image-container">
+            <div class="services-text">Помощь в приобретении любого вида имущества</div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide services-slide">
+          <div class="services-image-container">
+            <div class="services-text">Лучшие условия аренды жилья</div>
+          </div>
+        </div>
+        
+        <div class="swiper-slide services-slide">
+          <div class="services-image-container">
+            <div class="services-text">Юридическая помощь от профессионалов</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Подключение Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.services-slider', {
+    slidesPerView: 'auto', 
+    spaceBetween: 24, 
+    loop: true, 
+    centeredSlides: false, 
+    
+    breakpoints: {
+      640: { spaceBetween: 30 },
+      1024: { spaceBetween: 40 }
+    },
+    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    speed: 600,
+  });
+</script>
+      <section class="features-section" id="about">
+  <h2 class="features-title">почему выбирают нас</h2>
+  <div class="features-grid">
+    
+    <!-- Карточка 1: Безопасность -->
+    <input type="checkbox" id="modal-features-safety" class="modal-toggle">
+    <label for="modal-features-safety" class="feature-card">
+      <img src="../assets/images/shield.svg" alt="Безопасность" class="feature-icon">
+      <h3 class="feature-title">АБСОЛЮТНАЯ БЕЗОПАСНОСТЬ</h3>
+      <p class="feature-description">Многоуровневая система проверки и юридической сопровождение на всех этапах сделки</p>
+    </label>
+    <div class="modal">
+      <label for="modal-features-safety" class="modal__overlay"></label>
+      <div class="modal__content">
+        <label for="modal-features-safety" class="modal__close">✕</label>
+        <img src="../assets/images/shield.svg" alt="Безопасность" class="modal__icon">
+        <h2 class="modal__title">АБСОЛЮТНАЯ БЕЗОПАСНОСТЬ</h2>
+        <p class="modal__description">
+          Мы обеспечиваем полную безопасность ваших сделок с помощью многоуровневой системы проверки всех участников и документов.
+        </p>
+        <div class="modal__features">
+          <h3>Этапы проверки:</h3>
+          <ul>
+            <li>Проверка юридической чистоты объекта</li>
+            <li>Анализ контрагентов</li>
+            <li>Страхование рисков</li>
+            <li>Контроль выполнения обязательств</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 2: Скорость -->
+    <input type="checkbox" id="modal-features-speed" class="modal-toggle">
+    <label for="modal-features-speed" class="feature-card">
+      <img src="../assets/images/light.svg" alt="Скорость" class="feature-icon">
+      <h3 class="feature-title">МГНОВЕННЫЙ РЕЗУЛЬТАТ</h3>
+      <p class="feature-description">Искусственный интеллект подбирает идеальные варианты за 24 часа с гарантией лучшей цены</p>
+    </label>
+    <div class="modal">
+      <label for="modal-features-speed" class="modal__overlay"></label>
+      <div class="modal__content">
+        <label for="modal-features-speed" class="modal__close">✕</label>
+        <img src="../assets/images/light.svg" alt="Скорость" class="modal__icon">
+        <h2 class="modal__title">ТЕХНОЛОГИИ И СКОРОСТЬ</h2>
+        <p class="modal__description">
+          AI-алгоритмы анализируют тысячи объектов и подбирают лучшие варианты за 24 часа с гарантией лучшей цены.
+        </p>
+        <div class="modal__steps">
+          <h3>Процесс подбора:</h3>
+          <ol>
+            <li>Анализ ваших требований</li>
+            <li>AI-сканирование рынка</li>
+            <li>Персональная подборка вариантов</li>
+            <li>Гарантия лучшей цены</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Карточка 3: Сервис -->
+    <input type="checkbox" id="modal-features-service" class="modal-toggle">
+    <label for="modal-features-service" class="feature-card">
+      <img src="../assets/images/circle_info.svg" alt="Сервис" class="feature-icon">
+      <h3 class="feature-title">СЕРВИС</h3>
+      <p class="feature-description">Персональный менеджер 24/7, консьерж-сервис и полное сопровождение от поиска до заселения</p>
+    </label>
+    <div class="modal">
+      <label for="modal-features-service" class="modal__overlay"></label>
+      <div class="modal__content">
+        <label for="modal-features-service" class="modal__close">✕</label>
+        <img src="../assets/images/circle_info.svg" alt="Сервис" class="modal__icon">
+        <h2 class="modal__title">ПРЕМИУМ СЕРВИС 24/7</h2>
+        <p class="modal__description">
+          Персональный менеджер, консьерж-сервис и полное сопровождение от поиска до заселения и постпродажная поддержка.
+        </p>
+        <div class="modal__features">
+          <h3>Наш сервис включает:</h3>
+          <ul>
+            <li>Персональный менеджер 24/7</li>
+            <li>Консьерж-сервис</li>
+            <li>Полное сопровождение сделки</li>
+            <li>Помощь с заселением и постпродажная поддержка</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+      <section class="properties-section" id="properties">
+  <h2 class="properties-title">популярные предложения</h2>
+  <div class="properties-grid">
+    <article class="property-card">
+      <div class="property-image-container">
+        <img src="../assets/images/image 5.png" alt="Двухкомнатная квартира в Москве" class="property-image">
+        <span class="property-tag tag-sale">ПРОДАЖА</span>
+      </div>
+      <div class="property-info">
+        <div class="property-price">5,560,000₽</div>
+        <div class="property-title">Двухкомнатная квартира в Москве</div>
+        <div class="property-location">
+          <img src="../assets/images/location.svg" alt="Местоположение" class="location-icon">
+          <span class="location-text">Пресненская набережная, 12А</span>
+        </div>
+        <div class="property-details">
+          <div class="detail-item">
+            <img src="../assets/images/bed.svg" alt="Спальни" class="detail-icon">
+            <span class="detail-text">2 спальни</span>
+          </div>
+          <div class="detail-item">
+            <img src="../assets/images/rulle.svg" alt="Площадь" class="detail-icon">
+            <span class="detail-text">34 м²</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <article class="property-card">
+      <div class="property-image-container">
+        <img src="../assets/images/image 6.png" alt="Частный дом" class="property-image">
+        <span class="property-tag tag-rent">АРЕНДА</span>
+      </div>
+      <div class="property-info">
+        <div class="property-price">56,000₽/мес</div>
+        <div class="property-title">Частный дом</div>
+        <div class="property-location">
+          <img src="../assets/images/location.svg" alt="Местоположение" class="location-icon">
+          <span class="location-text">ул. Тверская, 15</span>
+        </div>
+        <div class="property-details">
+          <div class="detail-item">
+            <img src="../assets/images/bed.svg" alt="Спальни" class="detail-icon">
+            <span class="detail-text">3 спальни</span>
+          </div>
+          <div class="detail-item">
+           <img src="../assets/images/rulle.svg" alt="Площадь" class="detail-icon">
+            <span class="detail-text">140 м²</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="property-card">
+      <div class="property-image-container">
+        <img src="../assets/images/image210.jpg" alt="Двухкомнатная квартира в Москве" class="property-image">
+        <span class="property-tag tag-sale">ПРОДАЖА</span>
+      </div>
+      <div class="property-info">
+        <div class="property-price">4,560,000₽</div>
+        <div class="property-title">Студия в Москве</div>
+        <div class="property-location">
+          <img src="../assets/images/location.svg" alt="Местоположение" class="location-icon">
+          <span class="location-text">Пресненская набережная, 52Г</span>
+        </div>
+        <div class="property-details">
+          <div class="detail-item">
+            <img src="../assets/images/bed.svg" alt="Спальни" class="detail-icon">
+            <span class="detail-text">1 спальни</span>
+          </div>
+          <div class="detail-item">
+            <img src="../assets/images/rulle.svg" alt="Площадь" class="detail-icon">
+            <span class="detail-text">15 м²</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+      <section class="final-cta-section">
+  <div class="final-cta-container">
+    <div class="final-cta-content">
+      <h2 class="final-cta-title">ГОТОВЫ СДЕЛАТЬ ШАГ?</h2>
+      <p class="final-cta-subtitle">Подберите недвижимость вашей мечты уже сейчас</p>
+      <a href="#properties" class="cta-button">НАЧАТЬ ПОИСК</a>
+    </div>
+  </div>
+</section>
+    </main>
+    
+    <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3 class="footer-brand-title">АЛЬТЕРНАТИВА</h3>
+      <p class="footer-brand-description">Агентство недвижимости. Помогаем найти дом вашей мечты!</p>
+    </div>
+    
+    <div class="footer-services">
+      <h4 class="footer-section-title">УСЛУГИ</h4>
+      <ul>
+        <li><a href="#" class="footer-service-link">Продажа недвижимости</a></li>
+        <li><a href="#" class="footer-service-link">Аренда недвижимости</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-contacts">
+      <h4 class="footer-section-title">КОНТАКТЫ</h4>
+      <ul>
+        <li class="contact-item">
+          <img src="../assets/images/location.svg" alt="" class="contact-icon">
+          <span class="contact-text">Нижний Новгород, Красносельская улица, 26</span>
+        </li>
+        <li class="contact-item">
+          <img src="../assets/images/phone.svg" alt="" class="contact-icon">
+          <span class="contact-text">+7 (999) 123-45-67</span>
+        </li>
+        <li class="contact-item">
+          <img src="../assets/images/mail.svg" alt="" class="contact-icon">
+          <span class="contact-text">filyutin07@bk.ru</span>
+        </li>
+        <li class="contact-item">
+          <img src="../assets/images/calendar.svg" alt="" class="contact-icon">
+          <span class="contact-text">Пн-Пт: 8:00-22:00</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-divider"></div>
+  <p class="footer-copyright">© 2024 АЛЬТЕРНАТИВА. Все права защищены.</p>
+</footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

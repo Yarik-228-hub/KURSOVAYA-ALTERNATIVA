@@ -1,0 +1,215 @@
+// Модальные окна (универсальные)
+.modal-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    background: #0a0f1c;
+    border: 1px solid #ffffff;
+    border-radius: 24px;
+    padding: 40px 24px;
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    z-index: 1;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #00d4ff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(#00d4ff, 0.1);
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-family: 'Georama', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-family: 'Exo', sans-serif;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  &__features,
+  &__steps {
+    h3 {
+      font-size: 18px;
+      font-family: 'Georama', sans-serif;
+      font-weight: 600;
+      color: #00d4ff;
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      font-size: 14px;
+      font-family: 'Exo', sans-serif;
+      line-height: 1.4;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// Активация модалки для features-section
+.modal-toggle:checked + .feature-card + .modal {
+  display: block;
+}
+
+// СЕКЦИЯ ФИЧЕЙ
+.features-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  margin-top: 64px;
+
+  @media (min-width: 768px) {
+    padding: 56px;
+  }
+}
+
+.features-title {
+  font-size: 32px;
+  font-family: 'Georama', sans-serif;
+  font-weight: 900;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media (min-width: 640px) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  @media (min-width: 768px) {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 64px;
+    line-height: 77px;
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px;
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+  }
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #0a0f1c;
+  border-radius: 24px;
+  padding: 30px 14px;
+  text-align: center;
+  transition: transform .3s ease;
+  cursor: pointer;
+
+  &:hover { transform: scale(1.02); }
+}
+
+.feature-icon {
+  width: 66px;
+  height: 82px;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-family: 'Georama', sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  color: #ffffff;
+
+  @media (min-width: 640px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  @media (min-width: 768px) {
+    font-size: 19px;
+    line-height: 24px;
+  }
+}
+
+.feature-description {
+  font-size: 14px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+
+  @media (min-width: 640px) {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}

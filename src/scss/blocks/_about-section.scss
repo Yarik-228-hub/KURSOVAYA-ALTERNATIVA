@@ -1,0 +1,158 @@
+.about-about-section {
+  padding: 20px 16px;
+  margin-top: 40px;
+
+  &__container {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-family: 'Georama', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    text-align: justify;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__stat-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__stat-number {
+    font-size: 24px;
+    font-family: 'Georama', sans-serif;
+    font-weight: 700;
+  }
+
+  &__stat-label {
+    font-size: 14px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Делаем фотографию квадратной и пропорциональной */
+    object-fit: cover;
+    border-radius: 20px;
+    align-self: center;
+  }
+
+  @media (min-width: 640px) {
+    &__text { 
+      font-size: 14px; 
+      line-height: 1.5;
+    }
+    &__stat-row { 
+      flex-direction: row; 
+      gap: 20px;
+    }
+    &__stat-number { 
+      font-size: 28px; 
+    }
+    &__stat-label { 
+      font-size: 16px; 
+    }
+    &__image {
+      max-width: 300px;
+      border-radius: 25px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 24px 40px;
+    &__content { 
+      flex-direction: row; 
+      gap: 30px;
+      align-items: flex-start;
+    }
+    &__text-block { 
+      width: 55%; 
+      align-items: flex-start; 
+    }
+    &__text { 
+      font-size: 15px; 
+      margin-bottom: 20px;
+    }
+    &__image { 
+      width: 45%; 
+      max-width: none;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      margin-top: 60px;
+      border-radius: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__title { 
+      font-size: 32px; 
+      margin-bottom: 24px;
+    }
+    &__text { 
+      font-size: 18px; 
+      line-height: 1.6;
+    }
+    &__stat-number { 
+      font-size: 36px; 
+    }
+    &__stat-label { 
+      font-size: 20px; 
+    }
+    &__image { 
+      width: 400px;
+      height: 400px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    &__text { 
+      font-size: 20px; 
+    }
+    &__image { 
+      width: 450px;
+      height: 450px;
+    }
+  }
+}

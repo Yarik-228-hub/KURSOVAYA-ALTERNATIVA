@@ -1,0 +1,35 @@
+// == Цвета новой дизайн-системы ==
+$primary-bg: #050a14;
+$secondary-bg: #0a0f1c;
+$gradient-start: #1d1031;
+$gradient-middle: #0f0c20;
+$gradient-end: #0e1b29;
+$accent: #0f3fad;
+$accent-hover: #0d35a0;
+$text-primary: #ffffff;
+$text-secondary: #e0e0e0;
+$tag-sale: #0f3fad;
+$tag-rent: #ad0f66;
+
+$button-secondary: #172b4d;
+$button-secondary-hover: #1e3a5f;
+$border-color: #979797;
+
+$font-primary: 'Exo', Arial, sans-serif;
+$font-secondary: 'Georama', Arial, sans-serif;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$border-radius: 34px;
+$border-radius-sm: 14px;
+$border-radius-md: 30px;
+$border-radius-lg: $border-radius;
+$max-width: 1200px;
+$container-padding: 16px;
+$transition-speed: 0.3s;
+$transition-timing: ease-in-out;

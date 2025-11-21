@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поиск недвижимости</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="store-search-section">
+    <div class="store-search-container">
+      <div class="store-property-type-selector">
+        <div class="store-property-selector-container">
+          <button class="store-purchase-button active" data-type="purchase">
+            <span class="store-purchase-text">Покупка</span>
+          </button>
+          <button class="store-rent-button" data-type="rent">Аренда</button>
+        </div>
+      </div>
+
+      <div class="store-search-filters">
+        <div class="store-filters-container">
+          <div class="store-filter-groups">
+            <div class="store-filter-group">
+              <span class="store-filter-label">Тип недвижимости</span>
+              <select class="store-dropdown" id="propertyType">
+                <option value="">Любой</option>
+                <option value="apartment">Квартира</option>
+                <option value="house">Дом</option>
+                <option value="cottage">Коттедж</option>
+              </select>
+            </div>
+            
+            <div class="store-filter-group">
+              <span class="store-filter-label">Бюджет</span>
+              <select class="store-dropdown" id="budget">
+                <option value="">Любой</option>
+                <option value="0-5">До 5 млн</option>
+                <option value="5-10">5-10 млн</option>
+                <option value="10+">Свыше 10 млн</option>
+              </select>
+            </div>
+            
+            <div class="store-filter-group">
+              <span class="store-filter-label">Район</span>
+              <select class="store-dropdown" id="district">
+                <option value="">Любой</option>
+                <option value="center">Центр</option>
+                <option value="sleeping">Спальный район</option>
+                <option value="suburb">Пригород</option>
+              </select>
+            </div>
+            
+            <div class="store-filter-group">
+              <span class="store-filter-label">Количество комнат</span>
+              <select class="store-dropdown" id="rooms">
+                <option value="">Любой</option>
+                <option value="1">1 комната</option>
+                <option value="2">2 комнаты</option>
+                <option value="3+">3+ комнат</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="store-search-buttons">
+            <button class="store-search-button" id="searchButton">НАЙТИ</button>
+            <button class="store-reset-button" id="resetButton">СБРОСИТЬ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const resetButton = document.getElementById('resetButton');
+      if (!resetButton) return;
+
+      resetButton.addEventListener('click', () => {
+        const selects = document.querySelectorAll('.store-dropdown');
+        selects.forEach(select => {
+          select.value = '';
+          select.dispatchEvent(new Event('change'));
+        });
+      });
+    });
+  </script>
+</body>
+</html>

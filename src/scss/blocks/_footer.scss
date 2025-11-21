@@ -1,0 +1,119 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+  padding: 40px 16px 24px;
+  background-color: $primary-bg;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 32px; 
+
+  @include respond(sm) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 200px; 
+  }
+} 
+
+.footer-brand {
+  flex: 0 0 auto;
+  max-width: 280px;
+
+  .footer-brand-title {
+    font-size: 20px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    line-height: 24px;
+    color: $text-primary;
+    margin-bottom: 20px; // БЫЛО 12px, СТАЛО БОЛЬШЕ
+  }
+
+  .footer-brand-description {
+    font-size: 14px;
+    font-family: $font-primary;
+    font-weight: 400;
+    line-height: 18px;
+    color: $text-primary;
+  }
+}
+
+.footer-services,
+.footer-contacts {
+  flex: 0 0 auto;
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; // БЫЛО 10-12px, СТАЛО БОЛЬШЕ
+  }
+}
+
+.footer-section-title {
+  font-size: 16px;
+  font-family: $font-secondary;
+  font-weight: 700;
+  line-height: 20px;
+  color: $text-primary;
+  margin-bottom: 24px; // БЫЛО 16px, СТАЛО БОЛЬШЕ
+}
+
+.footer-service-link {
+  font-size: 14px;
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 18px;
+  color: $text-primary;
+  text-decoration: none;
+  transition: color .3s ease;
+
+  &:hover { color: $accent; }
+}
+
+.contact-item {
+  display: flex;
+  gap: 10px; // БЫЛО 8px, СТАЛО БОЛЬШЕ
+  align-items: center;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-size: 13px;
+  font-family: $font-secondary;
+  font-weight: 400;
+  line-height: 17px;
+  color: $text-primary;
+}
+
+.footer-divider {
+  width: 80vw;
+  height: 1px;
+  background-color: $text-primary;
+  margin: 32px 0; // БЫЛО 24px, СТАЛО БОЛЬШЕ
+}
+
+.footer-copyright {
+  font-size: 13px;
+  font-family: $font-secondary;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  color: $text-primary;
+}
